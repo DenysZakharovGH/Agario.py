@@ -13,17 +13,13 @@ BLUE =      (0,     70,     225)
 WHITE =     (255,   255,    255)
 RED =       (225,   0,      50)
 GREEN =     (0,     225,    0)
-Aqua =	 	(0,	 	128	, 	128)
-Navy_Blue =	(0,	 	0,	 	128)
-Orange	= 	(255,	165,	 0)
-Yellow	 =	(255,	255, 	 0)
+Aqua =	 	   (0,	 	  128	, 	 128)
+Navy_Blue =	(0,	 	  0,	 	   128)
+Orange	= 	  (255,	  165,	   0)
+Yellow	 =	  (255,	  255, 	  0)
 
 list_of_colors = [BLUE,RED,GREEN,Aqua,Navy_Blue,Orange,Yellow]
 
-RIGHT = "to the right"
-LEFT = "to the left"
-STOP = "stop"
- 
 pygame.init()
 sc = pygame.display.set_mode((W, H))
 clock = pygame.time.Clock()
@@ -36,9 +32,6 @@ r = 10
 motion = STOP
 
 list_of_circles = []
-
-
-
 for i in range(100):
     list_of_circles.append([random.randrange(0,W,2),random.randrange(0,H,2),random.choice(list_of_colors)])
     
@@ -51,9 +44,6 @@ font = pygame.font.Font(pygame.font.get_default_font(), 36)
 text_start= font.render('Сьешь все и не попадись ЗЕЛЕНОМУ', True, (0, 0, 0))
 text_finish= font.render('ТЫ ПОБЕДИЛ', True, (0, 0, 0))
 text_lose= font.render('ТЫ ПРОИГРАЛ', True, (0, 0, 0))
-
-
-
 
 
 while 1:
